@@ -1,0 +1,217 @@
+@import "./../../global.scss";
+
+.socialContainer {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: right;
+	align-items: flex-end;
+	gap: 4px;
+
+
+	.chatMenuContainer {
+		position: relative;
+		width: 330px;
+		height: 100%;	
+		box-shadow: -2px 2px 10px black;
+		display: flex;
+		flex-direction: column;
+
+		.friendAndChannels{
+			overflow-y: scroll;         
+			height: 100%;
+
+			position: relative;
+
+		}
+
+
+		@media screen and (max-width:$mediumbreakpoint) {
+			width: 200px;
+		}
+
+
+		@media screen and (max-width:$mobilebreakpoint) {
+			width: 85%;
+			height: 92%;
+			margin: auto;
+		}
+	
+
+		.paramBoxContainer {
+			aspect-ratio: 230/100;
+			width: 100%;
+			position: relative;
+			display: flex;
+			gap: 5%;
+			min-height: 123px;
+			
+		
+			box-shadow: -2px 2px 8px black;
+			background-color: var(--sociallightcolor);
+
+			@media screen and (max-width:$mediumbreakpoint) {
+				aspect-ratio: 230/130;
+				gap: 3%;
+			}
+
+			@media screen and (max-width:$mobilebreakpoint) {
+				aspect-ratio: 230/85;
+				gap: 6%;
+			}
+
+
+			.pp {
+				width: 20%;
+
+				min-width: 70px;
+				aspect-ratio: 1/1;
+				margin-top: auto;
+				margin-bottom: auto;
+				padding-left: 10%;
+			}
+
+			.delimitor {
+				height: 80%;
+				width: 1px;
+				background-color: black;
+				margin-top: auto;
+				margin-bottom: auto;
+				filter: blur(0.3px);
+				@media screen and (max-width:$mediumbreakpoint) {
+					display: none;
+				}
+			}
+
+			.statusContainer {
+				display: flex;
+				flex-direction: column;
+				gap: 5%;
+				overflow: hidden;
+			
+				height: 95%;
+				position: relative;
+				padding-top: 15px;
+				padding-left: 5px;
+
+				@media screen and (max-width:$mediumbreakpoint) {
+					gap: 0px;
+				}
+
+				margin-top: auto;
+				margin-bottom: auto;
+
+				.status {
+					overflow: hidden;
+					width: auto;
+					display: flex;
+					flex-direction: column;
+					gap: 5px;
+					position: relative;
+
+				}
+
+				.socialOption {
+					display: flex;
+					gap: 10px;
+					margin-bottom: auto;
+				}
+			}
+		}
+	}
+
+	.hideChatMenuContainer{
+		position: absolute;
+		top: 50%;
+		right: 0%;
+		transform: translate(-3%, -50%);
+		border-radius: 10px;
+		height: 55px;
+		width: 14px;
+		background-color: var(--lowgreencolor);
+		position: absolute;
+		box-shadow: 2px 1px 4px black;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		line-height:0px;
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 30px;
+		cursor: default;
+	}
+
+}
+
+.socialBoxContainer {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: var(--lowgreencolor);
+
+	text-shadow: 5px 5px 5px black;
+	.title {
+
+		border-top: 2px solid black;
+		display: flex;
+
+
+		padding: 4px;
+		box-sizing: border-box;
+
+		gap: 8px;
+		align-items: center;
+		width: 100%;
+		position: relative;
+
+		text-shadow: 5px 5px 5px black;
+
+		.triangleProps {
+			width: 0;
+			height: 0;
+			cursor: pointer;
+		}
+
+		height: 35px;
+		position: relative;
+		align-items: center;
+		width: 100%;
+		gap: 5px;
+
+		.statusIcon {
+			aspect-ratio: 1/1 !important;
+			background-color: var(--statusgreencolor);
+			border-radius: 50%;
+			box-shadow: -1px 1px 2px rgb(44, 43, 43);
+		}
+
+		.triangleOpen {
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 12px solid white;
+
+			&:active {
+				border-top: 12px solid rgb(200, 200, 200);
+			}
+		}
+
+		.triangleClose {
+			border-top: 6px solid transparent;
+			border-left: 12px solid white;
+			border-bottom: 6px solid transparent;
+
+			&:active {
+				border-left: 12px solid rgb(200, 200, 200);
+			}
+		}
+	}
+
+	span {
+		color: white;
+		font-size: 23px;
+
+		
+
+	}
+}
+

@@ -1,0 +1,86 @@
+@import '../../global.scss';
+
+.container {
+	width: 90%;
+	margin: auto;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+
+
+	@media screen and (max-width:$mobilebreakpoint) {
+		flex-direction: column;
+	}
+
+	>.door {
+		margin: auto;
+		border: 1px solid black;
+		width: calc(90%/3 - 2px);
+		height: 86.4vh;
+		display: flex;
+		position: relative;
+		box-shadow: -20px 20px 20px black;
+
+		@media screen and (max-width:$mobilebreakpoint) {
+			height: calc(90%/3 - 2px);
+			width: calc(90% - 4px);
+		}
+
+
+		&:hover {
+			height: calc(91% - 4px);
+			width: calc(91%/3 - 2px);
+			box-shadow: -20px 40px 40px black;
+
+
+			@media screen and (max-width:$mobilebreakpoint) {
+				width: calc(91% - 4px);
+				height: calc(91%/3 - 2px);
+			}
+
+		}
+
+
+		>div {
+			width: 48.47%;
+			aspect-ratio: 413/113;
+			position: relative;
+			margin: auto;
+			min-height: 50px;
+			min-width: 90px;
+
+			button {
+				width: 100%;
+				height: 100%;
+				background-color: var(--pinkcolor) !important;
+				color: white !important;
+				box-shadow: -16px 16px 30px black;
+
+
+			}
+
+		}
+	}
+
+	.profilcontainer {
+		background: var(--grenatcolor);
+
+	}
+
+	.playcontainer {
+		background: #2F4454;
+
+	}
+
+	.socialcontainer {
+		background: #1C3334;
+	}
+
+	.logoutButton{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		bottom:2%;
+		right: 1%;
+	}
+}

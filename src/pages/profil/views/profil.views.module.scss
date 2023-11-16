@@ -1,0 +1,301 @@
+@import "../../../global";
+
+.container {
+	width: 100%;
+	position: relative;
+	display: flex;
+	gap: 40px;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	box-sizing: border-box;
+	background-color: var(--grenatcolor);
+
+	>* {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 20px;
+	}
+
+	.validButton {
+		width: 100px;
+		height: 22px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.parameters {
+		width: 90%;
+		justify-content: center;
+		font-size: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+
+		>div {
+			.inputparam {
+				width: 200px !important;
+				min-width: 200px !important;
+			}
+
+			display: flex;
+			gap: 5px;
+			align-items: center;
+			justify-content: center;
+			text-align: right;
+
+			@media screen and (max-width:$mobilebreakpoint) {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			>label {
+				width: 150px;
+				font-size: 18px;
+			}
+
+			>div {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				width: 250px;
+			}
+
+			.editIcon {
+				cursor: pointer;
+				width: 20px;
+				height: 20px;
+			}
+
+			.cancelIcon {
+				color: red
+			}
+
+			.validIcon {
+				color: green;
+			}
+		}
+	}
+
+	.avatar {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		.file_upload_container {
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+			flex-wrap: wrap;
+			text-align: center;
+
+			.file_upload_default {
+				display: none;
+			}
+
+			.file_upload_custom {
+				font-size: 15px;
+				background-color: transparent;
+				border-radius: 6px;
+				border: 2px solid;
+				border-color: whitesmoke;
+				color: whitesmoke;
+				padding: 1px 7px 1px 7px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.barlevel {
+		margin-left: auto;
+		margin-right: auto;
+
+		span {
+			color: white;
+			font-size: 27px;
+			margin: auto;
+		}
+	}
+}
+
+
+.rank {
+	padding: 1%;
+	color: white;
+
+	.delimitor {
+		margin-top: 3%;
+		height: 1px;
+		background-color: white;
+		width: 100%;
+	}
+}
+
+.statCardContainer {
+	background-color: white;
+}
+
+
+
+.circleWrap {
+	max-width: 100%;
+	height: 100%;
+	aspect-ratio: 1/1 !important;
+	background: #e6e2e7;
+	position: relative;
+	border-radius: 50%;
+
+
+	.circle {
+		max-width: 100%;
+		max-height: 100%;
+		aspect-ratio: 1/1 !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.circle .mask,
+	.circle .fill {
+		width: 100%;
+		max-height: 100%;
+		height: 100%;
+		aspect-ratio: 1/1;
+		position: absolute;
+		border-radius: 50%;
+	}
+
+	.circle .mask {
+		clip-path: polygon(50% 0px, 100% 0px, 100% 100%, 50% 100%);
+	}
+
+	.circle .mask .fill {
+		clip-path: polygon(0px 0px, 50% 0px, 50% 100%, 0px 100%);
+		background-color: #00bb7f;
+	}
+
+	.circle .mask.full,
+	.circle .fill {
+		animation: fill ease-in-out 3s;
+		transform: rotate(var(--angle));
+
+		@keyframes fill {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(var(--angle));
+			}
+		}
+	}
+
+
+
+	.insideCircle {
+		width: 80%;
+		aspect-ratio: 1/1;
+		max-height: 80%;
+		border-radius: 50%;
+		background: #fff;
+		text-align: center;
+		margin: auto;
+		position: absolute;
+		font-weight: 700;
+		display: flex;
+
+		>i {
+			color: #00bb7f;
+			margin: auto;
+		}
+	}
+}
+
+.themeOption {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	justify-content: center;
+	color: white;
+
+	>div {
+		width: 100%;
+		max-width: 300px;
+		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		.themeApercu {
+			width: 90%;
+			aspect-ratio: 3/2;
+		}
+
+		.colorChoice {
+			width: 20%;
+			aspect-ratio: 3/2;
+			background-color: var(--color);
+		}
+
+		.fleche:disabled {
+			visibility: hidden;
+		}
+
+		.flecheL {
+			border: none;
+			background-color: transparent;
+			display: inline-block;
+			height: 0;
+			width: 0;
+			border-top: 9px solid transparent;
+			border-right: 16px solid var(--profilgreycolor);
+			border-bottom: 7px solid transparent;
+		}
+
+		.flecheR {
+			border: none;
+			background-color: transparent;
+			display: inline-block;
+			height: 0;
+			width: 0;
+			border-top: 7px solid transparent;
+			border-bottom: 9px solid transparent;
+			border-left: 16px solid var(--profilgreycolor);
+		}
+	}
+}
+
+.qrCode {
+	padding-top: 30px;
+	margin: auto;
+	align-items: center;
+
+	p{
+		color: white;
+		text-align: center;
+		font-size: 20px; 
+		margin: 0px;
+		margin-bottom: 10px;
+	}
+
+	.QR {
+		background-color:  var(--sociallightcolor);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+}

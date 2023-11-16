@@ -1,0 +1,81 @@
+@import "../global";
+
+.container {
+	position: relative;
+	display: flex;
+	height: 100%;
+
+	width: 100%;
+
+	.magicbox {
+		position: relative;
+		display: flex;
+		border-radius: 58px;
+		background-color: var(--magicboxcolor);
+		border: 1px solid black;
+		overflow-wrap: break-word;
+		box-shadow: -8px 8px 15px black;
+		overflow: hidden;
+
+
+
+		display: flex;
+		aspect-ratio: 1069/1170;
+		margin: auto;
+
+		max-width: 90%;
+		min-height: 440px;
+
+		box-sizing: border-box;
+
+		.menu {
+			background-color: inherit;
+			position: relative;
+			box-sizing: border-box;
+			width: 100%;
+			max-height: 100%;
+			padding-left: 17%;
+			padding-right: 17%;
+			margin: auto;
+			display: flex;
+
+			@media screen and (max-width:$mobilebreakpoint) {
+				padding-top: 7%;
+				padding-bottom: 7%;
+				padding-left: 9%;
+				padding-right: 9%;
+			}
+		}
+
+		.cross {
+			display: flex;
+			border-radius: 50%;
+			padding: 1%;
+			position: absolute;
+			top: 5%;
+			right: 6%;
+			width: 30px;
+			height: 30px;
+			font-size: 16px;
+			z-index: 40 !important;
+
+			@media screen and (max-width:$mobilebreakpoint) {
+				width: 20px;
+				height: 20px;
+				font-size: 8px;
+			}
+		}
+
+		@media screen and (min-width:$largebreakpoint) {
+			width: 1000px;
+		}
+
+		@media screen and (max-width:$mobilebreakpoint) {
+			width: 85vw;
+			aspect-ratio: 0.7;
+			max-height: 500px;
+		}
+
+
+	}
+}

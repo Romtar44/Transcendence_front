@@ -1,0 +1,55 @@
+@import "./../../../global.scss";
+
+.channelCreationContainer {
+	position: relative;
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+	color: white;
+	background-color: var(--sociallightcolor);
+
+	h2 {
+		color: white;
+		text-align: center;
+	}
+
+	.channelTypeContainer {
+		margin: auto;
+		display: flex;
+		gap: 3px;
+		width: 100%;
+
+		@media screen and (max-width: 1470px) {
+			flex-direction: column;
+			width: 200px;
+		}
+
+		.errorAlert {
+			position: relative;
+			bottom: 10px;
+			white-space: pre-line;
+			color: red;
+		}
+	}
+
+	.channelHintContainer {
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+
+	.channelInputContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		background-color: var(--sociallightcolor);
+
+		.channelPasswordContainer {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			background-color: var(--sociallightcolor);
+		}
+	}
+}

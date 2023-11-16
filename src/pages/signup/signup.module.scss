@@ -1,0 +1,57 @@
+@import '../../global.scss';
+
+.signupContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+
+	gap: 20px;
+
+	color: white;
+	text-align: center;
+
+
+	@media screen and (max-width:$mediumbreakpoint) {
+		gap: 10px
+	}
+
+	.signupForm {
+
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		background-color: var(--grenatcolor);
+
+
+		@media screen and (max-width:$mediumbreakpoint) {
+			gap: 20px
+		}
+
+		@media screen and (max-width:$mobilebreakpoint) {
+			gap: 10px
+		}
+	}
+
+	.authButton42 {
+		align-items: flex-start;
+		display: flex;
+
+		top: 2px;
+		position: relative;
+		gap: 10px;
+		white-space: nowrap;
+
+		span {
+			color: var(--spancolor);
+		}
+	}
+
+	.errorAlert {
+		position: relative;
+		bottom: 10px;
+		white-space: pre-line;
+		color: red;
+	}
+}

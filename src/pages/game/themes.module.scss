@@ -1,0 +1,52 @@
+
+.theme0{
+	background-color: var(--bgTheme) ;
+	opacity: 0.8;
+}
+
+
+.theme1{
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #29292b55,  var(--bgTheme) );
+}
+
+.theme2{
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image:  linear-gradient(135deg,  var(--bgTheme) 25%, transparent 25%), linear-gradient(225deg,  var(--bgTheme) 25%, transparent 25%), linear-gradient(45deg,  var(--bgTheme) 25%, transparent 25%), linear-gradient(315deg,  var(--bgTheme) 25%, #e5e5f7 25%);
+	background-position:  10px 0, 10px 0, 0 0, 0 0;
+	background-size: 10px 10px;
+	background-repeat: repeat;
+}
+
+.theme3{
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image:  linear-gradient(135deg,  var(--bgTheme) 25%, transparent 25%), linear-gradient(225deg,  var(--bgTheme) 25%, transparent 25%), linear-gradient(45deg,  var(--bgTheme) 25%, transparent 25%), linear-gradient(315deg,  var(--bgTheme) 25%, #e5e5f7 25%);
+	background-position:  12px 0, 12px 0, 0 0, 0 0;
+	background-size: 24px 24px;
+	background-repeat: repeat;
+}
+
+.theme4{
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	
+	background: linear-gradient(135deg, #29292b55 25%, transparent 25%) -12px 0/ 24px 24px, linear-gradient(225deg,  var(--bgTheme) 25%, transparent 25%) -12px 0/ 24px 24px, linear-gradient(315deg, #29292b55 25%, transparent 25%) 0px 0/ 24px 24px, linear-gradient(45deg,  var(--bgTheme) 25%, #e5e5f7 25%) 0px 0/ 24px 24px;
+}
+
+.theme5{
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image: radial-gradient(circle at center center,  var(--bgTheme), #e5e5f7), repeating-radial-gradient(circle at center center,  var(--bgTheme),  var(--bgTheme), 12px, transparent 24px, transparent 12px);
+	background-blend-mode: multiply;
+}
+
+.theme6{
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image:  linear-gradient(30deg,  var(--bgTheme) 12%, transparent 12.5%, transparent 87%,  var(--bgTheme) 87.5%,  var(--bgTheme)), linear-gradient(150deg,  var(--bgTheme) 12%, transparent 12.5%, transparent 87%,  var(--bgTheme) 87.5%,  var(--bgTheme)), linear-gradient(30deg,  var(--bgTheme) 12%, transparent 12.5%, transparent 87%,  var(--bgTheme) 87.5%,  var(--bgTheme)), linear-gradient(150deg,  var(--bgTheme) 12%, transparent 12.5%, transparent 87%,  var(--bgTheme) 87.5%,  var(--bgTheme)), linear-gradient(60deg, #29292b55 25%, transparent 25.5%, transparent 75%, #29292b55 75%, #29292b55), linear-gradient(60deg, #29292b55 25%, transparent 25.5%, transparent 75%, #29292b55 75%, #29292b55);
+	background-size: 24px 42px;
+	background-position: 0 0, 0 0, 12px 21px, 12px 21px, 0 0, 12px 21px;
+}

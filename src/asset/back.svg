@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  width="800" height="800" viewBox="0 0 300 300"
+ preserveAspectRatio="xMidYMid meet" encoding="utf-8">
+  	<defs>
+        <filter id="dropShadow">
+   		 <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+   		 <feOffset dx="0" dy="40" />
+   		 <feMerge>
+     		 <feMergeNode />
+     		 <feMergeNode in="SourceGraphic" />
+   		 </feMerge>
+  		</filter>
+    </defs>
+  <path
+    	fill="none"
+
+    	stroke-width="30"
+    	stroke="white"
+    	d="M 200,20
+       		L 20,150
+        	L 200,280 0
+     		z"
+  	/>
+
+
+
+</svg>

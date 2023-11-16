@@ -1,0 +1,166 @@
+.container {
+	display: flex;
+	flex-direction:column; 
+	text-align: center;
+	justify-content: center;
+	position: fixed;
+	top:50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translate(-50%, -50%);
+
+	.cancelButton{
+		width: 90px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@keyframes loading {
+		20%{
+			content: " .\00a0\00a0";
+		}
+		60%{
+			content: " ..\00a0";
+		}
+		100%{
+			content: " ...";
+		}
+	}
+
+	p{
+		color: white;
+		font-size: 20px;
+		&::after{
+			
+			content:  "\00a0\00a0\00a0\00a0";
+			width: 20px!important;
+			position: relative;
+			animation: loading 3s infinite;
+
+		}
+	}
+
+	.ldsring {
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		width: 80px;
+		height: 80px;
+	}
+
+	.ldsring div {
+		box-sizing: border-box;
+		display: block;
+		position: absolute;
+		width: 64px;
+		height: 64px;
+		margin: 8px;
+		border: 8px solid #fff;
+		border-radius: 50%;
+		animation: ldsring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+		border-color: #fff transparent transparent transparent;
+	}
+
+	.ldsring div:nth-child(1) {
+		animation-delay: -0.45s;
+	}
+
+	.ldsring div:nth-child(2) {
+		animation-delay: -0.3s;
+	}
+
+	.ldsring div:nth-child(3) {
+		animation-delay: -0.15s;
+	}
+
+	@keyframes ldsring {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+}
+
+
+.awaitLoader{
+	backdrop-filter: blur(10px);
+	z-index: 100;
+
+	>p::after{
+		content: " a 20s pour repondre à votre demande";
+		animation: countDown 20s ;
+	}
+
+	@keyframes countDown {
+		0%{
+			content: " a 20s pour repondre à votre demande";
+		}
+		5%{
+			content: " a 19s pour repondre à votre demande";
+		}
+		10%{
+			content: " a 18s pour repondre à votre demande";
+		}
+		15%{
+			content: " a 17s pour repondre à votre demande";
+		}
+		20%{
+			content: " a 16s pour repondre à votre demande";
+		}
+		25%{
+			content: " a 15s pour repondre à votre demande";
+		}
+		30%{
+			content: " a 14s pour repondre à votre demande";
+		}
+		35%{
+			content: " a 13s pour repondre à votre demande";
+		}
+		40%{
+			content: " a 12s pour repondre à votre demande";
+		}
+		45%{
+			content: " a 11s pour repondre à votre demande";
+		}
+		50%{
+			content: " a 10s pour repondre à votre demande";
+		}
+		55%{
+			content: " a 9s pour repondre à votre demande";
+		}
+		60%{
+			content: " a 8s pour repondre à votre demande";
+		}
+		65%{
+			content: " a 7s pour repondre à votre demande";
+		}
+		70%{
+			content: " a 6s pour repondre à votre demande";
+		}
+		75%{
+			content: " a 5s pour repondre à votre demande";
+		}
+		80%{
+			content: " a 4s pour repondre à votre demande";
+		}
+		85%{
+			content: " a 3s pour repondre à votre demande";
+		}
+		90%{
+			content: " a 2s pour repondre à votre demande";
+		}
+		95%{
+			content: " a 1s pour repondre à votre demande";
+		}
+		100%{
+			content: " a 0s pour repondre à votre demande";
+		}
+		
+	}
+}

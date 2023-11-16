@@ -1,0 +1,29 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import { MainLayout } from './layout/main.layout';
+import { BrowserRouter } from 'react-router-dom';
+import UserProvider from './lib/context';
+
+const root = ReactDOM.createRoot(
+	document.getElementById('root') as HTMLElement
+);
+
+root.render(
+	<React.Fragment>
+	{/* <React.StrictMode> */}
+		<BrowserRouter>
+			<UserProvider>
+				<MainLayout title="Elisar">
+					<App />
+				</MainLayout>
+			</UserProvider>
+		</BrowserRouter>
+	{/* </React.StrictMode> */}
+	</React.Fragment>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals())
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

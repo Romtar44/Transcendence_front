@@ -1,0 +1,88 @@
+	@import "../global";
+
+	html {
+		font-size: 62.5%;
+	}
+
+	.container {
+		position: absolute;
+		background-color: var(--mainbgcolor);
+		width: 100vw;
+		max-height: 100vh;
+		height: 100vh;
+
+		* {
+			font-family: 'Inter';
+			font-style: normal;
+			line-height: normal;
+
+			h2 {
+				font-size: 25px;
+				font-family: 'Sometype Mono';
+				font-style: normal;
+				line-height: normal;
+				font-weight: 600;
+
+				@media screen and (max-width:$mobilebreakpoint) {
+					font-size: 20px;
+				}
+
+				@media screen and (min-width:$largebreakpoint) {
+					font-size: 35px;
+				}
+			}
+
+			h1,
+			h1 * {
+				font-size: 35px;
+				font-family: 'Sometype Mono';
+				font-style: normal;
+				line-height: normal;
+				font-weight: 700;
+
+				@media screen and (max-width:$mobilebreakpoint) {
+					font-size: 25px;
+				}
+
+				@media screen and (min-width:$largebreakpoint) {
+					font-size: 45px;
+				}
+			}
+
+			button {
+				font-size: 20px;
+			}
+
+
+
+
+			@media screen and (max-width:$mobilebreakpoint) {
+
+				button {
+					font-size: 17px;
+				}
+			}
+
+
+		}
+
+
+		.main {
+			width: 100%;
+			height: 100%;
+			display: flex;
+
+		}
+
+		.footer {
+			position: absolute;
+			bottom: 0%;
+			width: 100%;
+
+			.logo {
+				float: right;
+				padding: 5px;
+			}
+		}
+
+	}

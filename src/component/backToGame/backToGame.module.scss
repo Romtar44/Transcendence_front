@@ -1,0 +1,61 @@
+.backToGame {
+	text-align: center;
+	height: calc((100% - 86.4%) / 2 - 15px);
+	width: max(60vw, 250px);
+	max-width: 500px;
+	position: fixed;
+	top: 7px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: var(--gameLightColor);
+	display: flex;
+	justify-content: center;
+	animation: light 1s infinite;
+
+	@keyframes light {
+		0% {
+			filter: brightness(1);
+		}
+
+		40% {
+			filter: brightness(1.75);
+		}
+
+		100% {
+			filter: brightness(1);
+		}
+	}
+
+
+	>div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		h2 {
+			color: white;
+			text-shadow: 3px 3px 5px black;
+			font-size: 16px;
+			margin: 2px;
+		}
+
+		span {
+			@media screen and (max-height: 715px) {
+				display: none;
+			}
+
+			font-size: 12px;
+		}
+	}
+
+	.pongLogo {
+		@media screen and (max-width: 700px) {
+			display: none;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+}

@@ -1,0 +1,80 @@
+@import '../../global.scss';
+
+.inputContainer {
+	position: relative;
+	width: 100%;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.input {
+		font-family: 'Sometype Mono';
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+		border-radius: 6px;
+		padding-left: 5%;
+		padding-right: 2%;
+		outline: none;
+		box-sizing: border-box;
+	}
+
+	.input::placeholder {
+		font-family: 'inter';
+		font-style: italic;
+	}
+
+	.input:focus {
+
+		~.topPlaceholder {
+			font-size: 15px;
+			box-sizing: border-box;
+			padding-left: 10px;
+			padding-right: 10px;
+			position: absolute;
+			top: -10px;
+			left: 1%;
+			display: block;
+		}
+	}
+
+	.input:focus::placeholder {
+		color: transparent;
+	}
+
+	.notEmpty:valid:not(.notValid):not(.noValidation) {
+		border: 1px solid #438D41 !important;
+	}
+
+	.notEmpty:invalid {
+		border: 1px solid red !important;
+	}
+
+	.notEmpty.notValid {
+		border: 1px solid red !important
+	}
+
+	.notValidMsg {
+		margin-top: 3px;
+		display: flex;
+		gap: 3px;
+		text-align: left;
+		font-size: 12px;
+	}
+
+	.eyeIcon {
+		height: 38px;
+		position: absolute;
+		top: 0%;
+		left: 90%;
+	}
+
+	.passwordType {
+		font-family: "Text Security";
+	}
+
+	.topPlaceholder {
+		display: none;
+	}
+}

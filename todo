@@ -1,0 +1,11 @@
+//social =>
+//	socket pour verifier la connection des users
+//	mettre l'affichage par défault quand on arrive sur social/pas d'ami
+
+//avatar =>
+//	nouvelle route pour les avatars des autres users
+
+//back avatar =>
+// modifier la fonction pour qu'elle renvoit l'avatar des amis ou des channels et pas le sien partout
+
+// le JEU

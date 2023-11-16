@@ -1,0 +1,134 @@
+@import '../../global.scss';
+
+.signinContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: white;
+	text-align: center;
+	
+	gap: 20px;
+
+	width: 100%;
+
+	@media screen and (max-width:$mobilebreakpoint) {
+		gap: 15px;
+	}
+
+
+	.title {
+		white-space: nowrap;
+		margin: 0;
+
+
+		.logo {
+			font-family: 'Interstatic';
+			font-size: 120px;
+			line-height: 120px;
+
+			@media screen and (max-width:$mobilebreakpoint) {
+				font-size: 85px;
+				line-height: 85px;
+			}
+
+		}
+	}
+
+
+	.authButton42 {
+
+		align-items: center;
+		display: flex;
+
+		white-space: nowrap;
+
+		position: relative;
+		gap: 2%;
+
+		span {
+
+			color: var(--spancolor);
+		}
+
+
+	}
+
+	.delimitor {
+		display: flex;
+		width: 100%;
+		margin: 0px;
+
+		div {
+			width: 33%;
+			margin: auto;
+			background: white;
+			height: 1px;
+		}
+	}
+
+	form > div{
+		background-color: var(--grenatcolor);
+	}
+
+	.emailForm {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+	}
+
+	.passwordForm {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		background-color: var(--grenatcolor);
+
+		a {
+			position: relative;
+			bottom: 10px;
+			text-align: right;
+			font-size: 14px;
+		}
+	}
+
+	.signUp {
+		position: relative;
+		bottom: 10px;
+		margin: 0px;
+		font-size: 10px;
+
+
+		span {
+			font-size: 14px;
+			color: #9f989b;
+
+		}
+
+		a {
+			font-size: 14px;
+			color: #299DED;
+			text-decoration: none;
+
+		}
+
+		@media screen and (max-width:$mobilebreakpoint) {
+
+			span,
+			a {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.errorAlert {
+		position: relative;
+		margin-top: 3px;
+		white-space: pre-line;
+		color: red;
+		font-size: 15px;
+
+
+	}
+
+}

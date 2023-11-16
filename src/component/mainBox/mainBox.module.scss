@@ -1,0 +1,33 @@
+.noBorder{
+	border: none;
+	box-shadow: none;
+}
+
+.mainBox {
+	position: relative;
+	border: 1px solid black;
+	width: 86.4vw;
+	max-width: 1515px;
+	height: 86.4vh;
+	margin: auto;
+	box-shadow: -6px 6px 18px black;
+	overflow: scroll;
+
+	.backButton {
+		width: 30px;
+		height: 30px;
+		position: fixed;
+		z-index: 3;
+		top: 12px;
+		left: 12px;
+
+	}
+
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    appearance: none;
+    color: transparent;
+}

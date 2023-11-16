@@ -1,0 +1,18 @@
+.notifBadge {
+	width: 18px;
+	height: 18px;
+	border-radius: 50px;
+	background-color: orange;
+	bottom: -18%;
+	left: -10%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.noUser {
+	position: relative;
+	margin: auto;
+	font-size: 18px;
+}

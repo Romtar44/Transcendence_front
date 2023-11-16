@@ -1,0 +1,65 @@
+@import '../../global.scss';
+
+.checkBoxContainer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.checkBox {
+	position: absolute;
+	opacity: 0;
+	left: -9000px;
+	top: -9000px;
+}
+
+.checkBox+label {
+	position: relative;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.checkBox+label::after {
+	display: flex;
+	position: absolute;
+	left: 1px;
+	color: red;
+	font-size: 16px;
+
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	justify-content: center;
+	align-items: center;
+	content: "\2716";
+
+	border-radius: 26px;
+	background-color: rgb(255, 255, 255);
+	transition: background-color 200ms ease-in-out, left 200ms ease-in-out;
+}
+
+.checkBox+label::before {
+	content: "";
+	width: 56px;
+	height: 28px;
+	border-radius: 28px;
+	background-color: red;
+	margin-right: 15px;
+}
+
+.checkBox:checked+label::before {
+	background-color: green;
+}
+
+.checkBox:checked+label::after {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	content: "\2714";
+	color: green;
+	font-size: 16px;
+
+	left: 29px;
+	background-color: white;
+}

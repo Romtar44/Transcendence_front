@@ -1,0 +1,104 @@
+@import "./../../global.scss";
+
+.userBoxContainer {
+	aspect-ratio: 200/50;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	box-shadow: 1px 2px 8px black;
+	padding: 5%;
+
+	max-width: 100%;
+	background-color: var(--socialcolor);
+	position: relative;
+
+	.profil {
+		width: 90%;
+	}
+
+
+
+	@media screen and (max-width:$mediumbreakpoint) {
+		aspect-ratio: 230/90 !important;
+	}
+
+	@media screen and (max-width:$mobilebreakpoint) {
+		aspect-ratio: 230/60 !important;
+		min-height: 50px;
+	}
+
+
+	&:hover:not(.pendingFriend) {
+		box-shadow: 1px 4px 16px black;
+		width: 110% !important;
+		z-index: 2;
+
+	}
+
+	.friendOption {
+		position: relative;
+	}
+
+
+}
+
+.activeConv {
+	background-color: var(--sociallightcolor);
+	box-shadow: 1px 4px 16px black;
+	z-index: 3;
+}
+
+
+.pendingFriend {
+	cursor: not-allowed;
+}
+
+
+
+
+.userInfo {
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	flex-direction: row;
+	max-width: 100%;
+
+
+
+
+
+	.pp {
+		gap: 5px;
+		margin-top: auto;
+		margin-bottom: auto;
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		flex-direction: row;
+		height: 40px;
+		max-height: 100%;
+		max-width: 100%;
+		position: relative;
+
+
+
+
+
+		.status {
+			position: absolute;
+			left: 30px;
+			top: 35px;
+			font-size: 10px;
+
+			span {
+				&::after {
+					width: 0px !important;
+				}
+			}
+		}
+	}
+}

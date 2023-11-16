@@ -1,0 +1,10 @@
+.logout{
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	bottom:2%;
+	right: 1%;
+	&:hover{
+		cursor: pointer;
+	}
+}

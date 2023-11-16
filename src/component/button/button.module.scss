@@ -1,0 +1,67 @@
+.button {
+	position: relative;
+	width: 100%;
+	height: 35px;
+	text-align: center;
+
+	cursor: pointer;
+
+	.children {
+
+		display: flex;
+		margin: auto;
+
+		>* {
+			margin: auto;
+		}
+
+	}
+
+	.mouseOverShadow {
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+
+	.mouseOverShadow:hover {
+		opacity: 0.25;
+	}
+
+	.mouseOverShadow:active {
+		opacity: 0.4;
+	}
+
+	.mouseOverLight {
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0.4;
+	}
+
+	.mouseOverLight:hover {
+		opacity: 0.25;
+	}
+
+	.mouseOverLight:active {
+		opacity: 0;
+	}
+
+}
+
+.submit:focus {
+	cursor: wait;
+}
+
+.button:disabled {
+	
+	.mouseOverShadow {
+		opacity: 0.5!important ;
+	}
+}

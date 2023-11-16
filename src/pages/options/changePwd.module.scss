@@ -1,0 +1,46 @@
+@import "./../../global.scss";
+
+.changePwdContainer {
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	color: white;
+
+	h1 {
+		margin: auto;
+		text-align: center;
+	}
+
+	.changePwd {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.errorAlert {
+		position: relative;
+		bottom: 23px;
+		font-size: 12px;
+		white-space: pre-line;
+		color: red;
+	}
+
+	.backIcon {
+		display: flex;
+		border-radius: 50%;
+		position: absolute;
+		top: 6%;
+		left: 5%;
+		width: 30px;
+		height: 30px;
+		font-size: 25px;
+		justify-content: center;
+
+		@media screen and (max-width:$mobilebreakpoint) {
+			width: 20px;
+			height: 20px;
+			font-size: 15px;
+		}
+	}
+}
