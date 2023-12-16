@@ -21,6 +21,7 @@ function App()
 {
 
 	axios.defaults.withCredentials = true
+	axios.defaults.headers.common['Access-Control-Allow-Origin'] = `${process.env.REACT_APP_BACK_URL}`;
 
 	const { user, updateUser, setIsLoaded, setIsConnected, isSimpleConnected, isConnected, isLoaded, setIsSimpleConnected } = useContext(UserContext);
 
