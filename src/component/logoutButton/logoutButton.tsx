@@ -12,6 +12,7 @@ export const logout = (setIsConnected?: React.Dispatch<React.SetStateAction<bool
 	{
 		if (setIsConnected)
 			setIsConnected(false)
+			document.cookie = "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 		disconectSocket()
 		window.location.pathname = '/signin'
 	}, () => void 0)
